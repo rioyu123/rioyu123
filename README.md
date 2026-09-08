@@ -4,8 +4,6 @@ Building for an agent-first world.
 
 With a decade of hands-on engineering across global enterprise platforms and AI infrastructure, I focus on building AI agents and the systems that make them actually work.
 
-Curious by default, grounded in engineering. I care about what’s next and the craft it takes to take things from research to production.
-
 ---
 
 ### What I'm Focused On
