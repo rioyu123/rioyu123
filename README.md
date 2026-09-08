@@ -21,7 +21,7 @@ With a decade of hands-on engineering across global enterprise platforms and AI 
 
 #### Merged
 
-| No. | Project | ⭐ Project Stars | PR | Technical Contribution & Impact |
+| No. | Project | ⭐&nbsp;Stars | PR | Technical&nbsp;Contribution&nbsp;&amp;&nbsp;Impact |
 | ---: | :------ | ----------: | :-- | :------------------------------ |
 | 1 | [**OpenAI Agents SDK**](https://github.com/openai/openai-agents-python) | [29,261](https://github.com/openai/openai-agents-python/stargazers) | [#4909](https://github.com/openai/openai-agents-python/pull/4909) | Made the encrypted-session quick start work with its documented installation, with explicit session cleanup and PostgreSQL dependencies. |
 | 2 | [**OpenAI Agents SDK**](https://github.com/openai/openai-agents-python) | [29,261](https://github.com/openai/openai-agents-python/stargazers) | [#4822](https://github.com/openai/openai-agents-python/pull/4822) | Prevented phantom turn-0 usage records on empty session branches, keeping usage totals aligned with actual conversation turns. |
