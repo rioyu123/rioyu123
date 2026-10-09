@@ -17,9 +17,7 @@ A decade of hands-on engineering across enterprise platforms and AI infrastructu
 
 ### Open-Source Contributions
 
-39 accepted contributions to projects maintained by others, as of October 9, 2026.
-
-37 merged pull requests I authored, one Google ADK change integrated via Copybara, and one Cloudflare fix I wrote that a maintainer submitted and merged.
+39 accepted open-source contributions as of October 9, 2026.
 
 #### OpenAI
 
