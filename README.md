@@ -17,7 +17,7 @@ A decade of hands-on engineering across enterprise platforms and AI infrastructu
 
 ### Open-Source Contributions
 
-46 accepted open-source contributions as of October 23, 2026.
+49 accepted open-source contributions as of October 30, 2026.
 
 #### OpenAI
 
@@ -80,55 +80,68 @@ A decade of hands-on engineering across enterprise platforms and AI infrastructu
 
 | No. | Project | PR | Impact |
 | ---: | :------ | :-- | :----- |
-| 33 | [**s3transfer**](https://github.com/boto/s3transfer) | [#423](https://github.com/boto/s3transfer/pull/423) | Kept `ReadFileChunk` reads within the chunk, so negative read sizes and reads after seeking past its end no longer return data from beyond the part. |
+| 33 | [**AWS SDK for pandas**](https://github.com/aws/aws-sdk-pandas) | [#3497](https://github.com/aws/aws-sdk-pandas/pull/3497) | Preserved Athena decimal precision in Arrow-backed query results, including chunked reads, nulls and empty results. |
+| 34 | [**s3transfer**](https://github.com/boto/s3transfer) | [#423](https://github.com/boto/s3transfer/pull/423) | Kept `ReadFileChunk` reads within the chunk, so negative read sizes and reads after seeking past its end no longer return data from beyond the part. |
 
 #### Apple
 
 | No. | Project | PR | Impact |
 | ---: | :------ | :-- | :----- |
-| 34 | [**Core ML Tools**](https://github.com/apple/coremltools) | [#2849](https://github.com/apple/coremltools/pull/2849) | Rejected inverted `RangeDim` bounds at construction when the upper bound is positive, catching invalid input shapes early. |
+| 35 | [**Core ML Tools**](https://github.com/apple/coremltools) | [#2849](https://github.com/apple/coremltools/pull/2849) | Rejected inverted `RangeDim` bounds at construction when the upper bound is positive, catching invalid input shapes early. |
 
 #### Tesla
 
 | No. | Project | PR | Impact |
 | ---: | :------ | :-- | :----- |
-| 35 | [**Fixed Containers**](https://github.com/teslamotors/fixed-containers) | [#228](https://github.com/teslamotors/fixed-containers/pull/228) | Fixed a compilation error in `OptionalReference::emplace()` where a parameter shadowed an accessor, and used `std::addressof` to handle overloaded address-of operators. |
-| 36 | [**Fixed Containers**](https://github.com/teslamotors/fixed-containers) | [#227](https://github.com/teslamotors/fixed-containers/pull/227) | Made empty-range insertion in `FixedList` return the original position, matching standard container semantics. |
+| 36 | [**Fixed Containers**](https://github.com/teslamotors/fixed-containers) | [#228](https://github.com/teslamotors/fixed-containers/pull/228) | Fixed a compilation error in `OptionalReference::emplace()` where a parameter shadowed an accessor, and used `std::addressof` to handle overloaded address-of operators. |
+| 37 | [**Fixed Containers**](https://github.com/teslamotors/fixed-containers) | [#227](https://github.com/teslamotors/fixed-containers/pull/227) | Made empty-range insertion in `FixedList` return the original position, matching standard container semantics. |
 
 #### Cloudflare
 
 | No. | Project | PR | Impact |
 | ---: | :------ | :-- | :----- |
-| 37 | [**Cloudflare Agents**](https://github.com/cloudflare/agents) | [#2326](https://github.com/cloudflare/agents/pull/2326) | Fixed method-override detection after Agent wraps methods, removing false skills warnings and restoring missing-classifier warnings. I authored the fix; a maintainer rebased it and merged it through their own pull request. |
+| 38 | [**Cloudflare Agents**](https://github.com/cloudflare/agents) | [#2326](https://github.com/cloudflare/agents/pull/2326) | Fixed method-override detection after Agent wraps methods, removing false skills warnings and restoring missing-classifier warnings. I authored the fix; a maintainer rebased it and merged it through their own pull request. |
 
 #### Tracel AI
 
 | No. | Project | PR | Impact |
 | ---: | :------ | :-- | :----- |
-| 38 | [**Burn**](https://github.com/tracel-ai/burn) | [#5494](https://github.com/tracel-ai/burn/pull/5494) | Kept extensionless Burnpack paths as given through atomic saves, overwrite protection, and store round-trips, with no silent `.bpk` fallback. |
+| 39 | [**Burn**](https://github.com/tracel-ai/burn) | [#5494](https://github.com/tracel-ai/burn/pull/5494) | Kept extensionless Burnpack paths as given through atomic saves, overwrite protection, and store round-trips, with no silent `.bpk` fallback. |
 
 #### LAPACK
 
 | No. | Project | PR | Impact |
 | ---: | :------ | :-- | :----- |
-| 39 | [**LAPACK**](https://github.com/Reference-LAPACK/lapack) | [#1433](https://github.com/Reference-LAPACK/lapack/pull/1433) | Corrected zero-pivot column updates in six symmetric and Hermitian factorization routines, so factors of singular matrices reconstruct the input. |
+| 40 | [**LAPACK**](https://github.com/Reference-LAPACK/lapack) | [#1433](https://github.com/Reference-LAPACK/lapack/pull/1433) | Corrected zero-pivot column updates in six symmetric and Hermitian factorization routines, so factors of singular matrices reconstruct the input. |
+
+#### h5py
+
+| No. | Project | PR | Impact |
+| ---: | :------ | :-- | :----- |
+| 41 | [**h5py**](https://github.com/h5py/h5py) | [#2986](https://github.com/h5py/h5py/pull/2986) | Made per-dataset zero cache settings take effect and prevented errors from empty external-file and virtual-dataset prefixes. |
+
+#### Boltons
+
+| No. | Project | PR | Impact |
+| ---: | :------ | :-- | :----- |
+| 42 | [**Boltons**](https://github.com/mahmoud/boltons) | [#534](https://github.com/mahmoud/boltons/pull/534) | Stopped sorted statistics from reordering the original data, keeping mode results independent of earlier calculations. Reimplemented and credited by the maintainer in [#609](https://github.com/mahmoud/boltons/pull/609). |
 
 #### fsspec
 
 | No. | Project | PR | Impact |
 | ---: | :------ | :-- | :----- |
-| 40 | [**fsspec**](https://github.com/fsspec/filesystem_spec) | [#2196](https://github.com/fsspec/filesystem_spec/pull/2196) | Made negative start offsets in FTP `cat_file` count back from the end of the file instead of sending an invalid offset. |
-| 41 | [**fsspec**](https://github.com/fsspec/filesystem_spec) | [#2197](https://github.com/fsspec/filesystem_spec/pull/2197) | Normalized protocol prefixes and leading slashes in the shared archive `ls`, so ZIP listings return the correct directory contents. |
-| 42 | [**fsspec**](https://github.com/fsspec/filesystem_spec) | [#2198](https://github.com/fsspec/filesystem_spec/pull/2198) | Encoded literal GitHub filenames in content API requests, so names with `#`, `?`, or percent escapes resolve to the correct file for reads and deletes. |
-| 43 | [**fsspec**](https://github.com/fsspec/filesystem_spec) | [#2127](https://github.com/fsspec/filesystem_spec/pull/2127) | Fixed `DirFileSystem` detailed listings so `glob` and `find` return relative names that read back through the same wrapper. |
-| 44 | [**fsspec**](https://github.com/fsspec/filesystem_spec) | [#2221](https://github.com/fsspec/filesystem_spec/pull/2221) | Made direct FTP reads and downloads with full URLs behave like buffered reads by normalizing paths before sending commands. |
+| 43 | [**fsspec**](https://github.com/fsspec/filesystem_spec) | [#2196](https://github.com/fsspec/filesystem_spec/pull/2196) | Made negative start offsets in FTP `cat_file` count back from the end of the file instead of sending an invalid offset. |
+| 44 | [**fsspec**](https://github.com/fsspec/filesystem_spec) | [#2197](https://github.com/fsspec/filesystem_spec/pull/2197) | Normalized protocol prefixes and leading slashes in the shared archive `ls`, so ZIP listings return the correct directory contents. |
+| 45 | [**fsspec**](https://github.com/fsspec/filesystem_spec) | [#2198](https://github.com/fsspec/filesystem_spec/pull/2198) | Encoded literal GitHub filenames in content API requests, so names with `#`, `?`, or percent escapes resolve to the correct file for reads and deletes. |
+| 46 | [**fsspec**](https://github.com/fsspec/filesystem_spec) | [#2127](https://github.com/fsspec/filesystem_spec/pull/2127) | Fixed `DirFileSystem` detailed listings so `glob` and `find` return relative names that read back through the same wrapper. |
+| 47 | [**fsspec**](https://github.com/fsspec/filesystem_spec) | [#2221](https://github.com/fsspec/filesystem_spec/pull/2221) | Made direct FTP reads and downloads with full URLs behave like buffered reads by normalizing paths before sending commands. |
 
 #### Flop Labs
 
 | No. | Project | PR | Impact |
 | ---: | :------ | :-- | :----- |
-| 45 | [**Technocore**](https://github.com/flop-labs/technocore-chat) | [#135](https://github.com/flop-labs/technocore-chat/pull/135) | Stopped `HEAD` requests from appending messages or burning nonces, so read-only routes stay read-only. |
-| 46 | [**Technocore**](https://github.com/flop-labs/technocore-chat) | [#126](https://github.com/flop-labs/technocore-chat/pull/126) | Prevented HTTP 500 errors when the idle reaper removes room or note files during a read; permission errors still surface. |
+| 48 | [**Technocore**](https://github.com/flop-labs/technocore-chat) | [#135](https://github.com/flop-labs/technocore-chat/pull/135) | Stopped `HEAD` requests from appending messages or burning nonces, so read-only routes stay read-only. |
+| 49 | [**Technocore**](https://github.com/flop-labs/technocore-chat) | [#126](https://github.com/flop-labs/technocore-chat/pull/126) | Prevented HTTP 500 errors when the idle reaper removes room or note files during a read; permission errors still surface. |
 
 ---
 
